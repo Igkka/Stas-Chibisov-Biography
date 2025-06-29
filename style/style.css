@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url(../style/preset.css);
+@import url(../style/cube.css);
+@import url(../style/github.css);
+@import url(../style/marquee.css);
+@import url(../style/navbar.css);
+
+:root{
+    --primary-font:"Stout";
+    --secondary-font:"Gargota";
+    --accent-font:"Arial";
+    --bg-color:black
+}
+@font-face {
+    font-family: "Stout";
+    src: url(../fonts/Stoutface-Small-Caps.ttf);
+}
+@font-face {
+    font-family: "Gargota";
+    src: url(../fonts/GarotaSansSC-Bold-FFP.ttf);
+}
+
+@font-face {
+    font-family: "Geo";
+    src: url(../fonts/GEOspeed-SmallCaps-FFP.ttf);
+}
+
+body{
+    background: var(--bg-color);
+    color: #fff
+}
+
+body,html{
+    scroll-behavior: smooth;
+}
+.container{
+    max-width: 1220px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-page{
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 500px;
+    flex-direction: column;
+
+    h1{
+        font-size: 3rem;
+        font-family: "Stout";
+        text-transform: uppercase;
+        font-weight: bold;
+        text-shadow: 0 0px 10px rgba(255, 255, 255,.75);
+        animation: blink 10s infinite linear;
+    }
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 15%;
+}
+
+.aside-nav{
+    color: white;
+    perspective: 500px;
+    position: fixed;
+    left: 0;
+    padding: 100px;
+    text-shadow: 0px 0px 7px white;
+    div{
+        transform-style: preserve-3d;
+        transform: rotateY(20deg) translateZ(200px);
+        font-size: 3.5rem;
+        font-weight: bold;
+        font-family: "Geo";
+        transition: all .2s ease-in-out;
+        &:hover{
+            transform: rotateY(0deg) translateZ(150px);
+            
+
+        }
+    }
+}
+
+.about{
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    
+    h2{
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif ;
+        text-transform: bold;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685);
+        animation: blink 10s infinite linear;
+        color: color;
+    }
+
+
+}
+.about-skills{
+        width:50%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+align-items: center;
+    flex-direction: column;
+position: relative;
+
+    h3{
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+       &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 600px;
+    /* transform: rotate(45deg); */
+               background: linear-gradient(to bottom, 
+                rgba(255, 255, 200, 0.8) 0%,
+                rgba(255, 255, 150, 0.6) 30%,
+                rgba(255, 255, 100, 0.4) 70%,
+                rgba(255, 255, 50, 0.034) 100%
+            );
+            clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+     filter: blur(2px);
+       
+    z-index: -1;
+}
+}
+
+.about-skill{
+    display: flex;
+    gap: 10px;
+}
+
+.about-info{
+    display: flex;
+}
+
+.skill-item{
+
+    color: black;
+    border-radius: 20px;
+    padding: 5px;
+    background: white;
+    width: 100px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 14px;
+
+}
+.about-title{
+color: gray;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-greeting{
+    width:50%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Caprasimo", serif;
+    p{
+        width: 430px;
+    }
+}
+
+.projects{    
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    
+    h2{
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif ;
+        text-transform: bold;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685);
+        animation: blink 10s infinite linear;
+        color: color;
+    }
+
+}
+
+.projects-invite{
+    height: auto;
+    min-height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    font-family: "Stout";
+}
+
+#element{
+    color: #e69191;
+    font-size: 3.5rem;
+}
+
+#contacts{
+        height: auto;
+    min-height: 40vh;
+    position: relative;
+    
+    h2{
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif ;
+        text-transform: bold;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685);
+        animation: blink 10s infinite linear;
+        color: color;
+    }
+}
+
+.contacts-info-mail{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+      font-family: "Space Mono", monospace;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }3%{
+        opacity: 1;
+    }6%{
+        opacity: 0;
+    }9%,60%{
+        opacity: 1;
+    }61%{
+        opacity: 0;
+    }62%,99%{
+        opacity: 1;
+    }100%{
+        opacity: 0;
+    }
+
+}
+
+
+
+@media screen and (max-width:1500px) {
+    
+
+    .aside-nav{
+        display: none;
+    }
+    .main-page{
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 1330px) {
+.about-info{
+    flex-direction: column;
+    align-items: center;
+}
+.about-skills{
+    &:after{
+        right: calc(50% - 150px);
+    }
+}
+}
+
+@media screen and (max-width: 700px) {
+    .main-page{
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    .about-greeting{
+        width: 100%;
+    }
+}
